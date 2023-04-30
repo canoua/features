@@ -1,4 +1,4 @@
- const input = document.querySelectorAll('.input');
+const input = document.querySelectorAll('.input');
 
 input.forEach(function(item) {  
   item.addEventListener('focus', function() {
