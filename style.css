@@ -84,7 +84,7 @@
 .label{
   position: absolute;
   top: 0;
-  transition: .3s;
+  transition: top ease-out .5s;
   pointer-events: none;
 }
 
