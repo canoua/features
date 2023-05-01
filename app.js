@@ -1,17 +1,22 @@
-const input = document.querySelectorAll('.input');
+document.addEventListener('DOMContentLoaded', function() {
+  const btn = document.querySelector('.btn');
+  const popup = document.querySelector('.popup');
+  const body = document.querySelector('body');
+  const closeBtn = document.querySelector('.close');
+  const html = document.querySelector('html');
 
-input.forEach(function(item) {  
-  item.addEventListener('focus', function() {
-    let id = item.id;
-    let label = document.querySelector(`[for="${id}"]`);
-    label.classList.add('label-top');
+  btn.addEventListener('click', function(event) {
+    event.preventDefault();
+    popup.classList.add('popup_active');
+    body.style.overflow = 'hidden';
+    html.style.paddingRight = '17px';
   })
 
-  item.addEventListener('focusout', function() {
-    let id = item.id;
-    let label = document.querySelector(`[for="${id}"]`);
-    if(item.value == '') {
-      label.classList.remove('label-top');
-    }
-  })
+  if(close) {
+    closeBtn.addEventListener('click', function() {
+      popup.classList.remove('popup_active');
+      body.style.overflow = 'visible';
+      html.style.paddingRight = '0';
+    })
+  }
 })
