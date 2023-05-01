@@ -1,17 +1,28 @@
-const input = document.querySelectorAll('.input');
+document.addEventListener('DOMContentLoaded', function() {
+  const btn = document.querySelector('.btn-up');
 
-input.forEach(function(item) {  
-  item.addEventListener('focus', function() {
-    let id = item.id;
-    let label = document.querySelector(`[for="${id}"]`);
-    label.classList.add('label-top');
-  })
-
-  item.addEventListener('focusout', function() {
-    let id = item.id;
-    let label = document.querySelector(`[for="${id}"]`);
-    if(item.value == '') {
-      label.classList.remove('label-top');
+  function scroll() {
+    
+    function show() {
+      btn.classList.remove('btn-up_hide');
     }
-  })
+
+    function hide() {
+      btn.classList.add('btn-up_hide')
+    }
+
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY || document.documentElement.scrollTop;
+      scrollY > 400 ? show() : hide();
+    });
+
+    document.querySelector('.btn-up').onclick = () => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      });
+    }
+  }
+  scroll();
 })
