@@ -1,17 +1,16 @@
-const input = document.querySelectorAll('.input');
+document.querySelectorAll('a[href^="#"').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
 
-input.forEach(function(item) {  
-  item.addEventListener('focus', function() {
-    let id = item.id;
-    let label = document.querySelector(`[for="${id}"]`);
-    label.classList.add('label-top');
-  })
+    let href = this.getAttribute('href').substring(1);
+    const scrollTarget = document.getElementById(href);
+    const topOffset = 0; 
+    const elementPosition = scrollTarget.getBoundingClientRect().top;
+    const offsetPosition = elementPosition - topOffset;
 
-  item.addEventListener('focusout', function() {
-    let id = item.id;
-    let label = document.querySelector(`[for="${id}"]`);
-    if(item.value == '') {
-      label.classList.remove('label-top');
-    }
-  })
-})
+    window.scrollBy({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
+  });
+});
