@@ -4,28 +4,31 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Анимация при клике на input</title>
+  <title>Бургер меню</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="form-wrapper">
-    <form action="" class="form">
-      <div class="form-inner">
-        <div class="form__box form__input-wrapper">
-          <label class="label form__label" for="input1">input1</label>
-          <input id="input1" class="input form__input" type="text">
-        </div>
-        <div class="form__box form__input-wrapper">
-          <label class="label form__label" for="input2">input2</label>
-          <input id="input2" class="input form__input" type="text">
-        </div>
-        <div class="form__box form__input-wrapper">
-          <label class="label form__label" for="input3">input3</label>
-          <input id="input3" class="input form__input" type="text">
-        </div>
-      </div>
-      <button class="form__btn" type="submit">Отправить</button>
-    </form>
+  <div class="burger" id="burger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="list_media" id="list">
+    <ul>
+      <li>
+        <a class="link" href="#">Главная</a>
+      </li>
+      <li>
+        <a class="link" href="#">Контакты</a>
+      </li>
+      <li>
+        <a class="link" href="#">Информация</a>
+      </li>
+    </ul>
+    <button class="close-btn" id="close-btn">Закрыть</button>
   </div>
   <script src="app.js"></script>
 </body>
