@@ -1,8 +1,49 @@
 *{
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+}
+
+li{
+  list-style: none;
+}
+
+body{
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+}
+
+.header{
+  padding: 50px;
 }
 
 .desktop, .block{
   height: 100vh;
+}
+
+#block1-link{
+  color: orange;
+}
+
+#block1{
+  background-color: orange;
+  padding: 50px;
+}
+
+#block2-link{
+  color:aquamarine;
+}
+
+#block2{
+  background-color:aquamarine;
+  padding: 50px;
+}
+
+#block3-link{
+  color:bisque;
+}
+
+#block3{
+  background-color:bisque;
+  padding: 50px;
 }
