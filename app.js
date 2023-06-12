@@ -22,14 +22,18 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   if(popup) {
-    // document.addEventListener('click', (event) => {
-
-    // })
-    function eventClose(event) {
-      if(event.key == 27 ){ // код клавиши Escape, но можно использовать e.key
+    document.addEventListener('click', function(event) {
+      const target = event.target;
+      if(target.closest('.popup-bg')&&!target.closest('.popup-content')){
         popup.classList.remove('popup_active');
       }
-    }
-    eventClose()
+    })
+    // function eventClose(event) {
+    //   if(event.key == 27 ){ // код клавиши Escape, но можно использовать e.key
+    //     // popup.classList.remove('popup_active');
+    //     console.log('escape');
+    //   }
+    // }
+    // eventClose()
   }
 })
