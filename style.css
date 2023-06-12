@@ -28,7 +28,7 @@
 .popup-content{
   width: 500px;
   height: 500px;
-  background-color: #000;
+  background-color: #fff;
   opacity: 1;
 }
 
@@ -61,7 +61,7 @@
   width: 100%;
   height: 3px;
   display: block;
-  background-color: green;
+  background-color: #fff;
   position: absolute;
 }
 
