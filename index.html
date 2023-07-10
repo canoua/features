@@ -7,19 +7,19 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <div class="slider">
-    <div class="slider__container">
-      <img src="https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg" alt="slide-1">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3QlBgYLTEIrdWBXRaCsslVd3tx5_k-0O6R3MCQCow1g&s" alt="slide-2">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_484-l33iFhLTGqnFOSJHfx6OVpzWIkFER6t4jPo&s" alt="slide-3">
+  <div class="wrapper">
+    <div class="slider">
+      <div class="slider__container">
+        <img class="slide__image" src="https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg" alt="slide-1">
+      </div>
+      <div class="arrow-wrapper">
+        <button class="btn arrow-left">Назад</button>
+        <button class="btn arrow-right">Вперед</button>
+      </div>
     </div>
+    <div class="pagination"></div>
+    
   </div>
-
-  <div class="pagination"></div>
-  <button class="arrow-left">Назад</button>
-  <button class="arrow-right">Вперед</button>
-  
   <script src="script.js"></script>
 </body>
 </html>
