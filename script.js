@@ -11,6 +11,14 @@ const arrowLeft = document.querySelector('.arrow-left');
 const arrowRight = document.querySelector('.arrow-right');
 const dots = document.querySelectorAll('.pagination__dot');
 
+
+for(let i=0; i<dots.length; i++) {
+  dots[i].addEventListener('click', function() {
+    currentIndex = i;
+    slide.src = sources[currentIndex];
+  }) 
+}
+
 arrowLeft.addEventListener('click', function() {
   if(currentIndex!=0) {
     currentIndex = --currentIndex;
@@ -24,4 +32,3 @@ arrowRight.addEventListener('click', function() {
     slide.src = sources[currentIndex];
   }
 })
-
